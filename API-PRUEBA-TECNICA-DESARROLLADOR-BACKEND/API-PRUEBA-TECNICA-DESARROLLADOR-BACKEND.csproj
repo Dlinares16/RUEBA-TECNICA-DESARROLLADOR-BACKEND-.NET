@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>API_PRUEBA_TECNICA_DESARROLLADOR_BACKEND</RootNamespace>
+    <UserSecretsId>bda2869c-6ced-4e3e-bb02-8212b25c8516</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.28.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Business\PruebaTecnica.Core.Business\PruebaTecnica.Core.Business.csproj" />
+    <ProjectReference Include="..\Business\PruebaTecnica.Seguridad.Business\PruebaTecnica.Seguridad.Business.csproj" />
+    <ProjectReference Include="..\Models\PruebaTecnica.Seguridad.Domain\PruebaTecnica.Seguridad.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
